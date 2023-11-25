@@ -1,4 +1,4 @@
-import { Source } from "../types/types";
+import { Source } from "../../../types";
 import knex from "../knex";
 
 export async function selectAllSources(): Promise<Source[]> {
