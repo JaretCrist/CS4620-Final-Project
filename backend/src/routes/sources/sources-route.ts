@@ -30,4 +30,32 @@ export const routes: ServerRoute<ReqRefDefaults>[] = [
     },
     handler: new SourcesController().addNew,
   },
+  {
+    method: "GET",
+    path: "/sources/{id}",
+    options: {
+      tags: ["api"],
+      description: "Get source book by id",
+      validate: {
+        params: joi.object({
+          id: joi.number(),
+        }),
+      },
+    },
+    handler: new SourcesController().getById,
+  },
+  {
+    method: "DELETE",
+    path: "/sources/{id}",
+    options: {
+      tags: ["api"],
+      description: "Delete source book by id",
+      validate: {
+        params: joi.object({
+          id: joi.number(),
+        }),
+      },
+    },
+    handler: new SourcesController().deleteById,
+  },
 ];
