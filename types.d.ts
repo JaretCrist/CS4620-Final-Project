@@ -1,4 +1,4 @@
-export interface Source extends Partial<SpellShort>, Parial<MonsterShort> {
+export interface Source extends Partial<SpellShort>, Partial<MonsterShort> {
   id: number;
   name: string;
   publisher: string;
@@ -25,6 +25,29 @@ export interface SpellShort {
   spellName: string;
   school: string;
   castingTime: string;
+}
+
+export interface Monster {
+  id: number;
+  name: string;
+  type: string;
+  actions: string;
+  ac: string;
+  hp: string;
+  spd: string;
+  str: string;
+  dex: string;
+  con: string;
+  int: string;
+  wis: string;
+  cha: string;
+  extras: string;
+  senses: string;
+  languages: string;
+  cr: string;
+  source: string;
+  image: string;
+  sourceName?: string;
 }
 
 export interface MonsterShort {
