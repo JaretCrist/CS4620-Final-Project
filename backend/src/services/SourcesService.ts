@@ -10,10 +10,36 @@ export async function createSource(newSource: Source): Promise<void> {
   await knex.insert(newSource).into("sources");
 }
 
+// Return everything from source joined with id and name from other tables
 export async function selectSingleSource(targetId: number): Promise<Source[]> {
-  const res = await knex<Source>("sources").where({
-    id: targetId,
-  });
+  let res: Source[] = [];
+
+  const spells = await knex<Source>("sources")
+    .join("spells", "sources.id", "spells.source")
+    .select(
+      "sources.*",
+      "spells.id as spellId",
+      "spells.name as spellName",
+      "spells.school",
+      "spells.casting_time as castingTime"
+    )
+    .where({ "sources.id": targetId });
+  res = res.concat(spells);
+
+  const monsters = await knex<Source>("sources")
+    .join("monsters", "sources.id", "monsters.source")
+    .select(
+      "sources.*",
+      "monsters.id as monsterId",
+      "monsters.name as monsterName",
+      "monsters.type",
+      "monsters.ac",
+      "monsters.hp",
+      "monsters.cr"
+    )
+    .where({ "sources.id": targetId });
+  res = res.concat(monsters);
+
   return res;
 }
 
@@ -24,3 +50,15 @@ export async function deleteSource(targetId: number): Promise<void> {
     })
     .del();
 }
+
+// const monsters = await knex("sources")
+// .join("spells", "sources.id", "spells.source")
+// .join("monsters", "sources.id", "monsters.source")
+// .select(
+//   "sources.*",
+//   "spells.id as spellId",
+//   "spells.name as spellName",
+//   "monsters.id as monsterId",
+//   "monsters.name as monsterName"
+// )
+// .where({ "sources.id": targetId });
