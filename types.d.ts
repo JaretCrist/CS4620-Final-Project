@@ -6,6 +6,20 @@ export interface Source extends Partial<SpellShort>, Parial<MonsterShort> {
   photoURL: string;
 }
 
+export interface Spell {
+  id: number;
+  name: string;
+  source: number;
+  school: string;
+  casting_time: string;
+  range: string;
+  components: string;
+  duration: string;
+  description: string;
+  classes: string;
+  sourceName?: string;
+}
+
 export interface SpellShort {
   spellId: number;
   spellName: string;

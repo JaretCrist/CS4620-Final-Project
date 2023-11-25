@@ -1,5 +1,6 @@
 import { Server } from "@hapi/hapi";
 import { routes as sourceRoutes } from "../routes/sources/sources-route";
+import { routes as spellRoutes } from "../routes/spells/spells-route";
 import { Boom } from "@hapi/boom";
 
 export async function init() {
@@ -9,6 +10,7 @@ export async function init() {
   });
 
   server.route(sourceRoutes);
+  server.route(spellRoutes);
 
   preResponse(server);
 

@@ -50,15 +50,3 @@ export async function deleteSource(targetId: number): Promise<void> {
     })
     .del();
 }
-
-// const monsters = await knex("sources")
-// .join("spells", "sources.id", "spells.source")
-// .join("monsters", "sources.id", "monsters.source")
-// .select(
-//   "sources.*",
-//   "spells.id as spellId",
-//   "spells.name as spellName",
-//   "monsters.id as monsterId",
-//   "monsters.name as monsterName"
-// )
-// .where({ "sources.id": targetId });
