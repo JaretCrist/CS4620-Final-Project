@@ -1,15 +1,13 @@
-import { Service } from "typedi";
-// import { Inject, Service } from 'typedi';
 import { Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
+import { Source } from "../../types/types";
+import knex from "../../knex";
+import * as sourcesService from "../../services/SourcesService";
 
-@Service()
 export class SourcesController {
-  // @Inject()
-  // private exampleService!: ExampleService;
-
   async getAll(request: Request, h: ResponseToolkit): Promise<ResponseObject> {
     try {
-      return h.response("get all test").code(200);
+      const res = await sourcesService.selectAll();
+      return h.response(res).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }
@@ -17,7 +15,10 @@ export class SourcesController {
 
   async addNew(request: Request, h: ResponseToolkit): Promise<ResponseObject> {
     try {
-      return h.response("add new test").code(200);
+      const newSource = request.payload as Source;
+      await sourcesService.insertInto(newSource);
+
+      return h.response("Successfully updated table").code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }

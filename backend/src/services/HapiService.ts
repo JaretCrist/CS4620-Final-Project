@@ -1,29 +1,26 @@
-import { Server, ResponseObject } from "@hapi/hapi";
+import { Server } from "@hapi/hapi";
+import { routes as sourceRoutes } from "../routes/sources/sources-route";
 import { Boom } from "@hapi/boom";
-import { routes as sourcesRoutes } from "../routes/sources/sources-route";
 
-export async function createAndRunServer(): Promise<void> {
+export async function init() {
   const server = new Server({
     port: 3000,
     host: "localhost",
   });
 
-  server.route(sourcesRoutes);
-  // server.route(spellssRoutes);
-  // server.route(monstersRoutes);
-  // server.route(racesRoutes);
-  // server.route(itemsRoutes);
+  server.route(sourceRoutes);
 
   preResponse(server);
 
   await server.start();
-  console.log("Server running on %s", server.info.uri);
+  console.log(`Server running on ${server.info.uri}`);
 }
 
-/**
- * Add functions to occur after the response is generated but before it hits the client
- * @param server The Hapi server
- */
+process.on("unhandledRejection", (err) => {
+  console.log(err);
+  process.exit(1);
+});
+
 function preResponse(server: Server): void {
   server.ext("onPreResponse", (request, h) => {
     const response = request.response;

@@ -1,9 +1,8 @@
+import { ReqRefDefaults, ResponseToolkit, ServerRoute } from "@hapi/hapi";
 import { SourcesController } from "./controller";
 import joi from "joi";
 
-const sourcesHandler = new SourcesController();
-
-export const routes = [
+export const routes: ServerRoute<ReqRefDefaults>[] = [
   {
     method: "GET",
     path: "/sources",
@@ -12,44 +11,23 @@ export const routes = [
       description: "Return all source books",
       validate: {},
     },
-    handler: sourcesHandler.getAll,
-  },
-  {
-    method: "GET",
-    path: "/sources/{id}",
-    options: {
-      tags: ["api"],
-      description: "Return source book by id",
-      validate: {
-        params: joi.object({
-          id: joi.number(),
-        }),
-      },
-    },
-    handler: sourcesHandler.getById,
+    handler: new SourcesController().getAll,
   },
   {
     method: "PUT",
     path: "/sources",
     options: {
       tags: ["api"],
-      description: "Return all source books",
-      validate: {},
-    },
-    handler: sourcesHandler.addNew,
-  },
-  {
-    method: "DELETE",
-    path: "/sources/{id}",
-    options: {
-      tags: ["api"],
-      description: "Delete source book by id",
+      description: "Add new source book",
       validate: {
-        params: joi.object({
-          id: joi.number(),
+        payload: joi.object({
+          name: joi.string(),
+          publisher: joi.string().optional(),
+          date: joi.string().optional(),
+          photo_url: joi.string().optional(),
         }),
       },
     },
-    handler: sourcesHandler.deleteById,
+    handler: new SourcesController().addNew,
   },
 ];
