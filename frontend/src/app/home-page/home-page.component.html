@@ -1,0 +1,31 @@
+<div class="background">
+  <h1>Dungeons & Dragons Database</h1>
+
+  <div class="row">
+    <div class="col-12 col-sm-6 col-lg-4 text-center">
+      <button class="navButton" (click)="goSources()" matTooltip="/sources">
+        Source Books
+      </button>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/spells">
+      <button class="navButton" (click)="goSpells()">Spells</button>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/monsters">
+      <button class="navButton" (click)="goMonsters()">Monsters</button>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/races">
+      <button class="navButton" (click)="goSources()">Races</button>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/items">
+      <button class="navButton" (click)="goSources()">Items</button>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 text-center">
+      <img
+        src="https://www.aidedd.org/dnd/images/red-dragon.jpg"
+        alt="Adult Red Dragon"
+        matTooltip="/monsters/12"
+        (click)="goRedDragon()"
+      />
+    </div>
+  </div>
+</div>
