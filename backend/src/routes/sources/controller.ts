@@ -17,7 +17,7 @@ export class SourcesController {
       const newSource = request.payload as Source;
       await sourcesService.createSource(newSource);
 
-      return h.response("Successfully updated table").code(200);
+      return h.response({ message: "Successfully updated table" }).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }
@@ -40,7 +40,9 @@ export class SourcesController {
     try {
       const id = request.params.id;
       await sourcesService.deleteSource(id);
-      return h.response(`Successfully deleted record: ${id}`).code(200);
+      return h
+        .response({ message: `Successfully deleted record: ${id}` })
+        .code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }

@@ -1,0 +1,39 @@
+<form [formGroup]="source">
+  <h1 mat-dialog-title>Create Source</h1>
+  <div mat-dialog-content>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Name:</p>
+          <mat-form-field appearance="fill">
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Publisher:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="publisher" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Date:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="date" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Photo URL:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="photo_url" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Cancel</button>
+    <button mat-button (click)="create()" cdkFocusInitial>Create Source</button>
+  </div>
+</form>

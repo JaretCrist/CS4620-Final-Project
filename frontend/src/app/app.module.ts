@@ -14,18 +14,27 @@ import { MonstersComponent } from './monsters/monsters.component';
 import { SourceComponent } from './sources/source/source.component';
 import { SpellComponent } from './spells/spell/spell.component';
 import { MonsterComponent } from './monsters/monster/monster.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { CreateSourceDialogComponent } from './sources/create-source-dialog/create-source-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SpellTableComponent } from './tables/spell-table/spell-table.component';
+import { MonsterTableComponent } from './tables/monster-table/monster-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     NavbarComponent,
+    ConfirmationDialogComponent,
     SourcesComponent,
+    CreateSourceDialogComponent,
     SourceComponent,
     SpellsComponent,
     SpellComponent,
     MonstersComponent,
     MonsterComponent,
+    SpellTableComponent,
+    MonsterTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +42,8 @@ import { MonsterComponent } from './monsters/monster/monster.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

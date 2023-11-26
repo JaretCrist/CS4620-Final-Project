@@ -1,0 +1,39 @@
+<div
+  class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
+  *ngFor="let monster of this.monsters; let index = index"
+>
+  <div class="col-5 fs-6" (click)="this.navigate(monster.monsterId)">
+    {{ monster.monsterName }}
+  </div>
+  <div class="col-4 col-md-3 fs-6" (click)="this.navigate(monster.monsterId)">
+    {{ monster.type }}
+  </div>
+  <div
+    class="col-1 fs-6 d-none d-md-block"
+    (click)="this.navigate(monster.monsterId)"
+  >
+    {{ monster.cr }}
+  </div>
+  <div
+    class="col-1 fs-6 d-none d-md-block"
+    (click)="this.navigate(monster.monsterId)"
+  >
+    {{ monster.ac }}
+  </div>
+  <div
+    class="col-1 fs-6 d-none d-md-block"
+    (click)="this.navigate(monster.monsterId)"
+  >
+    {{ monster.hp }}
+  </div>
+  <div class="col-1" *ngIf="monster.monsterId !== -1">
+    <button
+      mat-mini-fab
+      color="warn"
+      aria-label="Delete monster"
+      (click)="deleteMonster(monster.monsterId)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

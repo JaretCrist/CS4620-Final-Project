@@ -8,6 +8,11 @@ export async function init() {
   const server = new Server({
     port: 3000,
     host: "localhost",
+    routes: {
+      cors: {
+        origin: ["*"],
+      },
+    },
   });
 
   server.route(sourceRoutes);

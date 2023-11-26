@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  @Input() title = '';
+  @Input() returnLink = '';
+  @Input() createAvailable = false;
+  @Input() createFunction = () => {};
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  goBack(): void {
+    this.router.navigateByUrl(this.returnLink);
   }
-
 }

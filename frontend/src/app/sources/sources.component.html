@@ -1,1 +1,66 @@
-<p>sources works!</p>
+<app-navbar
+  [title]="'Sources'"
+  [returnLink]="'/Home'"
+  [createAvailable]="true"
+  [createFunction]="createSource"
+></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="this.isLoaded && this.error">
+  <h1>
+    {{ this.error }}
+  </h1>
+  <h1>Is the backend running?</h1>
+</div>
+
+<div *ngIf="this.isLoaded && !this.error">
+  <!-- 
+  Click event is duplicated on cols instead of row
+  so the delete button doesn't route
+-->
+  <div
+    class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
+    *ngFor="let source of this.sourceList; let index = index"
+  >
+    <div class="col-6 fs-6" (click)="this.navigate(source.id)">
+      {{ source.name }}
+    </div>
+    <div class="col-4 col-md-2 fs-6" (click)="this.navigate(source.id)">
+      {{ source.publisher }}
+    </div>
+    <div
+      class="col-2 fs-6 d-none d-md-block"
+      (click)="this.navigate(source.id)"
+    >
+      {{ source.date }}
+    </div>
+    <div
+      class="col-1 fs-6 d-none d-md-block"
+      (click)="this.navigate(source.id)"
+    >
+      <div *ngIf="source.photo_url && source.id !== -1">
+        <img
+          src="{{ source.photo_url }}"
+          alt="{{ source.name }} Cover Art"
+          class="box"
+        />
+      </div>
+      <div *ngIf="source.id === -1">
+        {{ source.photo_url }}
+      </div>
+    </div>
+    <div class="col-1" *ngIf="source.id !== -1">
+      <button
+        mat-mini-fab
+        color="warn"
+        aria-label="Delete source"
+        (click)="deleteSource(source.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

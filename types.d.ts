@@ -3,7 +3,7 @@ export interface Source extends Partial<SpellShort>, Partial<MonsterShort> {
   name: string;
   publisher: string;
   date: string;
-  photoURL: string;
+  photo_url: string;
 }
 
 export interface Spell {
