@@ -27,6 +27,7 @@ export async function selectSingleSource(targetId: number): Promise<Source[]> {
       "spells.casting_time as castingTime"
     )
     .where({ "sources.id": targetId });
+  res = res.concat(spells);
 
   const monsters = await knex<Source>("sources")
     .join("monsters", "sources.id", "monsters.source")
