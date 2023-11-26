@@ -14,6 +14,9 @@ export async function createSource(newSource: Source): Promise<void> {
 export async function selectSingleSource(targetId: number): Promise<Source[]> {
   let res: Source[] = [];
 
+  // Get just single source (if it has no child elements)
+  res = await knex<Source>("sources").where({ id: targetId });
+
   const spells = await knex<Source>("sources")
     .join("spells", "sources.id", "spells.source")
     .select(
@@ -24,7 +27,6 @@ export async function selectSingleSource(targetId: number): Promise<Source[]> {
       "spells.casting_time as castingTime"
     )
     .where({ "sources.id": targetId });
-  res = res.concat(spells);
 
   const monsters = await knex<Source>("sources")
     .join("monsters", "sources.id", "monsters.source")

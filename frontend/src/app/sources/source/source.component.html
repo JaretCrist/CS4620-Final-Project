@@ -9,7 +9,7 @@
     <div
       class="col-12 col-md-6 bg-secondary rounded border border-primary border-5"
     >
-      <h1 class="fs-1 my-3">{{ this.sourceInfo[0].name }}</h1>
+      <h1 class="title my-3">{{ this.sourceInfo[0].name }}</h1>
       <p class="fs-3 my-3">Publisher: {{ this.sourceInfo[0].publisher }}</p>
       <p class="fs-3 my-3">Release Date: {{ this.sourceInfo[0].date }}</p>
     </div>
@@ -81,7 +81,7 @@
       <div *ngIf="!(this.monsters.length > 0)" class="fs-5 my-3 ms-3">
         This source book has no monsters!
       </div>
-      <div *ngIf="this.spells.length > 0">
+      <div *ngIf="this.monsters.length > 0">
         <app-monster-table [monsters]="this.monsters"></app-monster-table>
       </div>
     </div>
