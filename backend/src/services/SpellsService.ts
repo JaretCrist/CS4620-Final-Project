@@ -11,8 +11,9 @@ export async function selectAllSpells(): Promise<SpellShort[]> {
   return res;
 }
 
-export async function createSpell(newspell: Spell): Promise<void> {
-  await knex.insert(newspell).into("spells");
+export async function createSpell(newspell: Spell): Promise<number> {
+  const id = await knex.insert(newspell).into("spells");
+  return id[0];
 }
 
 // Return everything from spell joined with source name

@@ -56,10 +56,10 @@ export class SpellsComponent implements OnInit {
         );
 
         this.httpClient
-          .put('http://localhost:3000/spells', cleanSpell)
-          .subscribe(() => {
+          .put<{ id: number }>('http://localhost:3000/spells', cleanSpell)
+          .subscribe((data) => {
             this.spellList.push({
-              spellId: newSpell.id,
+              spellId: data.id,
               spellName: newSpell.name,
               castingTime: newSpell.casting_time,
               school: newSpell.school,

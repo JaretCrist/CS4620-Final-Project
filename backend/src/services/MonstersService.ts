@@ -13,8 +13,9 @@ export async function selectAllMonsters(): Promise<MonsterShort[]> {
   return res;
 }
 
-export async function createMonster(newMonster: Monster): Promise<void> {
-  await knex.insert(newMonster).into("Monsters");
+export async function createMonster(newMonster: Monster): Promise<number> {
+  const id = await knex.insert(newMonster).into("Monsters");
+  return id[0];
 }
 
 // Return everything from Monster joined with source name

@@ -15,9 +15,9 @@ export class SpellsController {
   async addNew(request: Request, h: ResponseToolkit): Promise<ResponseObject> {
     try {
       const newSpell = request.payload as Spell;
-      await spellsService.createSpell(newSpell);
+      const id = await spellsService.createSpell(newSpell);
 
-      return h.response({ message: "Successfully updated table" }).code(200);
+      return h.response({ id: id }).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }

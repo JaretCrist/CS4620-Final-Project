@@ -6,8 +6,9 @@ export async function selectAllSources(): Promise<Source[]> {
   return res;
 }
 
-export async function createSource(newSource: Source): Promise<void> {
-  await knex.insert(newSource).into("sources");
+export async function createSource(newSource: Source): Promise<number> {
+  const id = await knex.insert(newSource).into("sources");
+  return id[0];
 }
 
 // Return everything from source joined with id and name from other tables

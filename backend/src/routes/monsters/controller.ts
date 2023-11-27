@@ -15,9 +15,9 @@ export class MonstersController {
   async addNew(request: Request, h: ResponseToolkit): Promise<ResponseObject> {
     try {
       const newMonster = request.payload as Monster;
-      await monstersService.createMonster(newMonster);
+      const id = await monstersService.createMonster(newMonster);
 
-      return h.response({ message: "Successfully updated table" }).code(200);
+      return h.response({ id: id }).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }

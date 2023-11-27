@@ -77,8 +77,9 @@ export class SourcesComponent implements OnInit {
         );
 
         this.httpClient
-          .put('http://localhost:3000/sources', cleanSource)
-          .subscribe(() => {
+          .put<{ id: number }>('http://localhost:3000/sources', cleanSource)
+          .subscribe((data) => {
+            newSource.id = data.id;
             this.sourceList.push(newSource);
           });
       }

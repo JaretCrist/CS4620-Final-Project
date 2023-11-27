@@ -15,9 +15,9 @@ export class SourcesController {
   async addNew(request: Request, h: ResponseToolkit): Promise<ResponseObject> {
     try {
       const newSource = request.payload as Source;
-      await sourcesService.createSource(newSource);
+      const id = await sourcesService.createSource(newSource);
 
-      return h.response({ message: "Successfully updated table" }).code(200);
+      return h.response({ id: id }).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }
