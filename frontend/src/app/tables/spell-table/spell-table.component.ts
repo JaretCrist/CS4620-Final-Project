@@ -20,7 +20,9 @@ export class SpellTableComponent {
   ) {}
 
   navigate(id: number): void {
-    this.router.navigateByUrl(`/spells/${id}`);
+    if (id !== -1) {
+      this.router.navigateByUrl(`/spells/${id}`);
+    }
   }
 
   deleteSpell(id: number): void {

@@ -49,7 +49,9 @@ export class SourcesComponent implements OnInit {
   }
 
   navigate(id: number): void {
-    this.router.navigateByUrl(`/sources/${id}`);
+    if (id !== -1) {
+      this.router.navigateByUrl(`/sources/${id}`);
+    }
   }
 
   deleteSource(id: number): void {

@@ -19,6 +19,7 @@ import { CreateSourceDialogComponent } from './sources/create-source-dialog/crea
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpellTableComponent } from './tables/spell-table/spell-table.component';
 import { MonsterTableComponent } from './tables/monster-table/monster-table.component';
+import { CreateSpellDialogComponent } from './spells/create-spell-dialog/create-spell-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,10 @@ import { MonsterTableComponent } from './tables/monster-table/monster-table.comp
     SourceComponent,
     SpellsComponent,
     SpellComponent,
+    SpellTableComponent,
+    CreateSpellDialogComponent,
     MonstersComponent,
     MonsterComponent,
-    SpellTableComponent,
     MonsterTableComponent,
   ],
   imports: [

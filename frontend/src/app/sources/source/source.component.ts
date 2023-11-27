@@ -18,6 +18,8 @@ export class SourceComponent implements OnInit {
 
   sourceInfo: Source[] = [];
   isLoaded = false;
+  sourceId = '-1';
+  error?: string = undefined;
 
   viewMode: 'spells' | 'monsters' | 'races' | 'items' = 'spells';
 
@@ -33,6 +35,7 @@ export class SourceComponent implements OnInit {
         mergeMap((params) => {
           const id = params.get('sourceId');
           if (id) {
+            this.sourceId = id;
             return this.httpClient.get<Source[]>(
               `http://localhost:3000/sources/${id}`
             );
@@ -40,6 +43,9 @@ export class SourceComponent implements OnInit {
           throw new Error('Could not get id from parameters');
         }),
         tap((data) => {
+          if (data.length === 0) {
+            this.error = `Failed to get information for source: ${this.sourceId}`;
+          }
           this.sourceInfo = data;
           this.collectChildren();
         })

@@ -20,7 +20,9 @@ export class MonsterTableComponent {
   ) {}
 
   navigate(id: number): void {
-    this.router.navigateByUrl(`/monsters/${id}`);
+    if (id !== -1) {
+      this.router.navigateByUrl(`/monsters/${id}`);
+    }
   }
 
   deleteMonster(id: number): void {

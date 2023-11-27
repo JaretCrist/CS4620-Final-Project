@@ -1,1 +1,21 @@
-<p>spells works!</p>
+<app-navbar
+  [title]="'Spells'"
+  [returnLink]="'/Home'"
+  [createAvailable]="true"
+  [createFunction]="createSpell"
+></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="this.isLoaded && this.error">
+  <h1>
+    {{ this.error }}
+  </h1>
+  <h1>Is the backend running?</h1>
+</div>
+
+<div *ngIf="this.isLoaded && !this.error">
+  <app-spell-table [spells]="this.spellList"></app-spell-table>
+</div>

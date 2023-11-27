@@ -17,7 +17,7 @@ export class SpellsController {
       const newSpell = request.payload as Spell;
       await spellsService.createSpell(newSpell);
 
-      return h.response("Successfully updated table").code(200);
+      return h.response({ message: "Successfully updated table" }).code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }
@@ -40,7 +40,9 @@ export class SpellsController {
     try {
       const id = request.params.id;
       await spellsService.deleteSpell(id);
-      return h.response(`Successfully deleted record: ${id}`).code(200);
+      return h
+        .response({ message: `Successfully deleted record: ${id}` })
+        .code(200);
     } catch (error) {
       return h.response((error as Error).message).code(400);
     }
