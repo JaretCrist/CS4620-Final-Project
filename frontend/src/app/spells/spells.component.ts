@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { Spell, SpellShort } from '../../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateSpellDialogComponent } from './create-spell-dialog/create-spell-dialog.component';
@@ -12,11 +11,7 @@ import { CreateSpellDialogComponent } from './create-spell-dialog/create-spell-d
   styleUrls: ['./spells.component.scss'],
 })
 export class SpellsComponent implements OnInit {
-  constructor(
-    private httpClient: HttpClient,
-    private router: Router,
-    public dialog: MatDialog
-  ) {}
+  constructor(private httpClient: HttpClient, public dialog: MatDialog) {}
 
   isLoaded = false;
   error?: string = undefined;

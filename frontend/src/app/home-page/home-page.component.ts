@@ -22,6 +22,6 @@ export class HomePageComponent {
   }
 
   goRedDragon(): void {
-    this.router.navigateByUrl('/monsters/12');
+    this.router.navigateByUrl('/monsters/13');
   }
 }

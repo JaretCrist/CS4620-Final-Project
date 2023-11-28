@@ -1,0 +1,125 @@
+<form [formGroup]="monster">
+  <h1 mat-dialog-title>Create Monster</h1>
+  <div mat-dialog-content>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <p>Name:</p>
+          <mat-form-field appearance="fill">
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>AC:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="ac" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>STR:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="str" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>INT:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="int" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Senses:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="senses" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <p>Source:</p>
+          <mat-form-field appearance="fill">
+            <input type="number" matInput formControlName="source" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>HP:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="hp" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>DEX:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="dex" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>WIS:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="wis" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Languages:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="languages" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="row">
+          <p>Type:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="type" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>SPD:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="spd" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>CON:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="con" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>CHA:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="cha" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>CR:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="cr" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Image URL:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="image"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div>Actions:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="actions"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div>Extras:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="extras"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Cancel</button>
+    <button mat-button (click)="create()">Create Monster</button>
+  </div>
+</form>

@@ -1,1 +1,98 @@
-<p>monster works!</p>
+<app-navbar [title]="'Monsters'" [returnLink]="'/monsters'"></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="error" class="fs-3 my-3">
+  {{ error }}
+</div>
+
+<div *ngIf="this.monsterInfo.length > 0">
+  <div class="row ms-2 me-3 my-2 height40">
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5"
+    >
+      <h1 class="title my-3">{{ this.monsterInfo[0].name }}</h1>
+      <p class="my-3">Type: {{ this.monsterInfo[0].type }}</p>
+      <p class="my-3" (click)="navigateToSource(this.monsterInfo[0].source)">
+        Source: <em class="text-info">{{ this.monsterInfo[0].sourceName }}</em>
+      </p>
+      <p class="my-3">AC: {{ this.monsterInfo[0].ac }}</p>
+      <p class="my-3">HP: {{ this.monsterInfo[0].hp }}</p>
+      <p class="my-3">CR: {{ this.monsterInfo[0].cr }}</p>
+    </div>
+
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5 text-center"
+    >
+      <div *ngIf="this.monsterInfo[0].image">
+        <img
+          src="{{ this.monsterInfo[0].image }}"
+          alt="{{ this.monsterInfo[0].name }} Cover Art"
+          class="fitSize"
+        />
+      </div>
+      <div *ngIf="!this.monsterInfo[0].image" class="fs-4 mt-4">
+        Cover art not found
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-2">
+    <!-- View buttons -->
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'Stats'"
+    >
+      Stats
+    </button>
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'Actions'"
+    >
+      Actions
+    </button>
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'Extras'"
+    >
+      Extras
+    </button>
+  </div>
+
+  <div
+    class="height40 bg-secondary rounded border border-primary border-5 mx-2"
+  >
+    <div *ngIf="this.viewMode === 'Stats'" class="fs-5 my-3 ms-3">
+      <p class="my-3">STR: {{ this.monsterInfo[0].str }}</p>
+      <p class="my-3">DEX: {{ this.monsterInfo[0].dex }}</p>
+      <p class="my-3">CON: {{ this.monsterInfo[0].con }}</p>
+      <p class="my-3">INT: {{ this.monsterInfo[0].int }}</p>
+      <p class="my-3">WIS: {{ this.monsterInfo[0].wis }}</p>
+      <p class="my-3">CHA: {{ this.monsterInfo[0].cha }}</p>
+    </div>
+
+    <div *ngIf="this.viewMode === 'Actions'">
+      <div *ngFor="let paragraph of this.monsterInfo[0].actions.split('|||')">
+        <p class="my-3">{{ paragraph }}</p>
+      </div>
+    </div>
+
+    <div *ngIf="this.viewMode === 'Extras'">
+      <p class="my-3">Senses: {{ this.monsterInfo[0].senses }}</p>
+
+      <p class="my-3">Languages: {{ this.monsterInfo[0].languages }}</p>
+
+      <div *ngFor="let paragraph of this.monsterInfo[0].extras.split('|||')">
+        <p class="my-3">{{ paragraph }}</p>
+      </div>
+    </div>
+  </div>
+</div>

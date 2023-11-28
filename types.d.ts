@@ -45,7 +45,7 @@ export interface Monster {
   senses: string;
   languages: string;
   cr: string;
-  source: string;
+  source: number;
   image: string;
   sourceName?: string;
 }

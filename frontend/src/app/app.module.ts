@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpellTableComponent } from './tables/spell-table/spell-table.component';
 import { MonsterTableComponent } from './tables/monster-table/monster-table.component';
 import { CreateSpellDialogComponent } from './spells/create-spell-dialog/create-spell-dialog.component';
+import { CreateMonsterDialogComponent } from './monsters/create-monster-dialog/create-monster-dialog.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CreateSpellDialogComponent } from './spells/create-spell-dialog/create-
     MonstersComponent,
     MonsterComponent,
     MonsterTableComponent,
+    CreateMonsterDialogComponent,
   ],
   imports: [
     BrowserModule,

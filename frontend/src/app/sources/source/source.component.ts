@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { filter, mergeMap, tap } from 'rxjs';
 import { MonsterShort, Source, SpellShort } from '../../../../../types';
 
@@ -10,11 +10,7 @@ import { MonsterShort, Source, SpellShort } from '../../../../../types';
   styleUrls: ['./source.component.scss'],
 })
 export class SourceComponent implements OnInit {
-  constructor(
-    private httpClient: HttpClient,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
 
   sourceInfo: Source[] = [];
   isLoaded = false;
@@ -107,9 +103,5 @@ export class SourceComponent implements OnInit {
     if (this.monsters.length > 0) {
       this.monsters = [monsterHeader].concat(this.monsters);
     }
-  }
-
-  navigate(url: string) {
-    this.router.navigateByUrl(url);
   }
 }
