@@ -42,3 +42,12 @@ CREATE TABLE monsters (
     image TEXT,
     FOREIGN KEY (source) REFERENCES sources(id)
 );
+
+CREATE TABLE items (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    source INTEGER,
+    type TEXT,
+    description TEXT,
+    FOREIGN KEY (source) REFERENCES sources(id)
+);
