@@ -51,3 +51,12 @@ CREATE TABLE items (
     description TEXT,
     FOREIGN KEY (source) REFERENCES sources(id)
 );
+
+CREATE TABLE races (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    parent TEXT,
+    source INTEGER,
+    details TEXT,
+    FOREIGN KEY (source) REFERENCES sources(id)
+);
