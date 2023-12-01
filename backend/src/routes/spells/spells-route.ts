@@ -1,4 +1,4 @@
-import { ReqRefDefaults, ResponseToolkit, ServerRoute } from "@hapi/hapi";
+import { ReqRefDefaults, ServerRoute } from "@hapi/hapi";
 import { SpellsController } from "./controller";
 import joi from "joi";
 

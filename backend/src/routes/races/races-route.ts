@@ -1,61 +1,61 @@
 import { ReqRefDefaults, ServerRoute } from "@hapi/hapi";
-import { SourcesController } from "./controller";
+import { RacesController } from "./controller";
 import joi from "joi";
 
 export const routes: ServerRoute<ReqRefDefaults>[] = [
   {
     method: "GET",
-    path: "/sources",
+    path: "/races",
     options: {
       tags: ["api"],
-      description: "Return all source books",
+      description: "Return all races",
       validate: {},
     },
-    handler: new SourcesController().getAll,
+    handler: new RacesController().getAll,
   },
   {
     method: "PUT",
-    path: "/sources",
+    path: "/races",
     options: {
       tags: ["api"],
-      description: "Add new source book",
+      description: "Add new race",
       validate: {
         payload: joi.object({
           name: joi.string(),
-          publisher: joi.string().optional(),
-          date: joi.string().optional(),
-          photo_url: joi.string().optional(),
+          source: joi.number(),
+          parent: joi.string().optional(),
+          details: joi.string().optional(),
         }),
       },
     },
-    handler: new SourcesController().addNew,
+    handler: new RacesController().addNew,
   },
   {
     method: "GET",
-    path: "/sources/{id}",
+    path: "/races/{id}",
     options: {
       tags: ["api"],
-      description: "Get source book by id",
+      description: "Get race by id",
       validate: {
         params: joi.object({
           id: joi.number(),
         }),
       },
     },
-    handler: new SourcesController().getById,
+    handler: new RacesController().getById,
   },
   {
     method: "DELETE",
-    path: "/sources/{id}",
+    path: "/races/{id}",
     options: {
       tags: ["api"],
-      description: "Delete source book by id",
+      description: "Delete race by id",
       validate: {
         params: joi.object({
           id: joi.number(),
         }),
       },
     },
-    handler: new SourcesController().deleteById,
+    handler: new RacesController().deleteById,
   },
 ];

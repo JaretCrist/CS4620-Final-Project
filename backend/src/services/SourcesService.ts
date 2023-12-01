@@ -44,6 +44,29 @@ export async function selectSingleSource(targetId: number): Promise<Source[]> {
     .where({ "sources.id": targetId });
   res = res.concat(monsters);
 
+  const items = await knex<Source>("sources")
+    .join("items", "sources.id", "items.source")
+    .select(
+      "sources.*",
+      "items.id as itemId",
+      "items.name as itemName",
+      "items.type as itemType"
+    )
+    .where({ "sources.id": targetId });
+  res = res.concat(items);
+
+  const races = await knex<Source>("sources")
+    .join("races", "sources.id", "races.source")
+    .select(
+      "sources.*",
+      "races.id as itemId",
+      "races.name as itemName",
+      "races.parent as parent",
+      "sources.name as sourceName"
+    )
+    .where({ "sources.id": targetId });
+  res = res.concat(races);
+
   return res;
 }
 

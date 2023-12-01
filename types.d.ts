@@ -1,4 +1,8 @@
-export interface Source extends Partial<SpellShort>, Partial<MonsterShort> {
+export interface Source
+  extends Partial<SpellShort>,
+    Partial<MonsterShort>,
+    Partial<ItemShort>,
+    Partial<RaceShort> {
   id: number;
   name: string;
   publisher: string;
@@ -57,4 +61,35 @@ export interface MonsterShort {
   ac: string;
   hp: string;
   cr: string;
+}
+
+export interface Item {
+  id: number;
+  name: string;
+  type: string;
+  description: string;
+  source: number;
+  sourceName?: string;
+}
+
+export interface ItemShort {
+  itemId: number;
+  itemName: string;
+  itemType: string;
+}
+
+export interface Race {
+  id: number;
+  name: string;
+  parent: string;
+  details: string;
+  source: number;
+  sourceName?: string;
+}
+
+export interface RaceShort {
+  raceId: number;
+  raceName: string;
+  parent: string;
+  sourceName: string;
 }

@@ -1,61 +1,61 @@
 import { ReqRefDefaults, ServerRoute } from "@hapi/hapi";
-import { SourcesController } from "./controller";
+import { ItemsController } from "./controller";
 import joi from "joi";
 
 export const routes: ServerRoute<ReqRefDefaults>[] = [
   {
     method: "GET",
-    path: "/sources",
+    path: "/items",
     options: {
       tags: ["api"],
-      description: "Return all source books",
+      description: "Return all items",
       validate: {},
     },
-    handler: new SourcesController().getAll,
+    handler: new ItemsController().getAll,
   },
   {
     method: "PUT",
-    path: "/sources",
+    path: "/items",
     options: {
       tags: ["api"],
-      description: "Add new source book",
+      description: "Add new item",
       validate: {
         payload: joi.object({
           name: joi.string(),
-          publisher: joi.string().optional(),
-          date: joi.string().optional(),
-          photo_url: joi.string().optional(),
+          source: joi.number(),
+          type: joi.string().optional(),
+          description: joi.string().optional(),
         }),
       },
     },
-    handler: new SourcesController().addNew,
+    handler: new ItemsController().addNew,
   },
   {
     method: "GET",
-    path: "/sources/{id}",
+    path: "/items/{id}",
     options: {
       tags: ["api"],
-      description: "Get source book by id",
+      description: "Get item by id",
       validate: {
         params: joi.object({
           id: joi.number(),
         }),
       },
     },
-    handler: new SourcesController().getById,
+    handler: new ItemsController().getById,
   },
   {
     method: "DELETE",
-    path: "/sources/{id}",
+    path: "/items/{id}",
     options: {
       tags: ["api"],
-      description: "Delete source book by id",
+      description: "Delete item by id",
       validate: {
         params: joi.object({
           id: joi.number(),
         }),
       },
     },
-    handler: new SourcesController().deleteById,
+    handler: new ItemsController().deleteById,
   },
 ];
