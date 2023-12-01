@@ -3,28 +3,34 @@
 
   <div class="row">
     <div class="col-12 col-sm-6 col-lg-4 text-center">
-      <button class="navButton" (click)="goSources()" matTooltip="/sources">
+      <button
+        class="navButton"
+        (click)="navigate('/sources')"
+        matTooltip="/sources"
+      >
         Source Books
       </button>
     </div>
     <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/spells">
-      <button class="navButton" (click)="goSpells()">Spells</button>
+      <button class="navButton" (click)="navigate('/spells')">Spells</button>
     </div>
     <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/monsters">
-      <button class="navButton" (click)="goMonsters()">Monsters</button>
+      <button class="navButton" (click)="navigate('/monsters')">
+        Monsters
+      </button>
     </div>
     <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/races">
-      <button class="navButton" (click)="goSources()">Races</button>
+      <button class="navButton" (click)="navigate('/races')">Races</button>
     </div>
     <div class="col-12 col-sm-6 col-lg-4 text-center" matTooltip="/items">
-      <button class="navButton" (click)="goSources()">Items</button>
+      <button class="navButton" (click)="navigate('/items')">Items</button>
     </div>
     <div class="col-12 col-sm-6 col-lg-4 text-center">
       <img
         src="https://www.aidedd.org/dnd/images/red-dragon.jpg"
         alt="Adult Red Dragon"
         matTooltip="/monsters/13"
-        (click)="goRedDragon()"
+        (click)="navigate('/monsters/13')"
       />
     </div>
   </div>

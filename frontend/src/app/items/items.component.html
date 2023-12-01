@@ -1,0 +1,21 @@
+<app-navbar
+  [title]="'Items'"
+  [returnLink]="'/Home'"
+  [createAvailable]="true"
+  [createFunction]="createItem"
+></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="this.isLoaded && this.error">
+  <h1>
+    {{ this.error }}
+  </h1>
+  <h1>Is the backend running?</h1>
+</div>
+
+<div *ngIf="this.isLoaded && !this.error">
+  <app-item-table [items]="this.itemList"></app-item-table>
+</div>

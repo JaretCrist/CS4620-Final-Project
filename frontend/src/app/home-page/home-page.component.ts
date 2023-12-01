@@ -9,19 +9,7 @@ import { Router } from '@angular/router';
 export class HomePageComponent {
   constructor(private router: Router) {}
 
-  goSources(): void {
-    this.router.navigateByUrl('/sources');
-  }
-
-  goSpells(): void {
-    this.router.navigateByUrl('/spells');
-  }
-
-  goMonsters(): void {
-    this.router.navigateByUrl('/monsters');
-  }
-
-  goRedDragon(): void {
-    this.router.navigateByUrl('/monsters/13');
+  navigate(url: string): void {
+    this.router.navigateByUrl(url);
   }
 }

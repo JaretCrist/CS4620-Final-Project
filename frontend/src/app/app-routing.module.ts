@@ -7,6 +7,10 @@ import { SpellsComponent } from './spells/spells.component';
 import { SpellComponent } from './spells/spell/spell.component';
 import { MonstersComponent } from './monsters/monsters.component';
 import { MonsterComponent } from './monsters/monster/monster.component';
+import { ItemsComponent } from './items/items.component';
+import { ItemComponent } from './items/item/item.component';
+import { RacesComponent } from './races/races.component';
+import { RaceComponent } from './races/race/race.component';
 
 const routes: Routes = [
   {
@@ -41,6 +45,22 @@ const routes: Routes = [
   {
     path: 'monsters/:monsterId',
     component: MonsterComponent,
+  },
+  {
+    path: 'items',
+    component: ItemsComponent,
+  },
+  {
+    path: 'items/:itemId',
+    component: ItemComponent,
+  },
+  {
+    path: 'races',
+    component: RacesComponent,
+  },
+  {
+    path: 'races/:raceId',
+    component: RaceComponent,
   },
 ];
 

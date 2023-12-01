@@ -2,7 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { filter, mergeMap, tap } from 'rxjs';
-import { MonsterShort, Source, SpellShort } from '../../../../../types';
+import {
+  ItemShort,
+  MonsterShort,
+  RaceShort,
+  Source,
+  SpellShort,
+} from '../../../../../types';
 
 @Component({
   selector: 'app-source',
@@ -21,8 +27,8 @@ export class SourceComponent implements OnInit {
 
   spells: SpellShort[] = [];
   monsters: MonsterShort[] = [];
-  races = [];
-  items = [];
+  races: RaceShort[] = [];
+  items: ItemShort[] = [];
 
   ngOnInit(): void {
     this.route.paramMap
@@ -102,6 +108,54 @@ export class SourceComponent implements OnInit {
 
     if (this.monsters.length > 0) {
       this.monsters = [monsterHeader].concat(this.monsters);
+    }
+
+    this.races = this.sourceInfo
+      .filter((value) => value.raceId)
+      .map((source) => {
+        if (source.raceId) {
+          return {
+            raceId: source.raceId,
+            raceName: source.raceName ?? '',
+            parent: source.parent ?? '',
+            sourceName: source.sourceName ?? '',
+          };
+        }
+        throw new Error('Races: Child element missing properties');
+      });
+
+    const raceHeader: RaceShort = {
+      raceId: -1,
+      raceName: 'NAME',
+      parent: 'PARENT',
+      sourceName: 'SOURCE',
+    };
+
+    if (this.races.length > 0) {
+      this.races = [raceHeader].concat(this.races);
+    }
+
+    this.items = this.sourceInfo
+      .filter((value) => value.itemId)
+      .map((source) => {
+        if (source.itemId) {
+          return {
+            itemId: source.itemId,
+            itemName: source.itemName ?? '',
+            itemType: source.itemType ?? '',
+          };
+        }
+        throw new Error('Items: Child element missing properties');
+      });
+
+    const itemHeader: ItemShort = {
+      itemId: -1,
+      itemName: 'NAME',
+      itemType: 'TYPE',
+    };
+
+    if (this.items.length > 0) {
+      this.items = [itemHeader].concat(this.items);
     }
   }
 }

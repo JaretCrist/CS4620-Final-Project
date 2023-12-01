@@ -59,8 +59,8 @@ export async function selectSingleSource(targetId: number): Promise<Source[]> {
     .join("races", "sources.id", "races.source")
     .select(
       "sources.*",
-      "races.id as itemId",
-      "races.name as itemName",
+      "races.id as raceId",
+      "races.name as raceName",
       "races.parent as parent",
       "sources.name as sourceName"
     )

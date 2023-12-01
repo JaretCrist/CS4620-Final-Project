@@ -21,6 +21,14 @@ import { SpellTableComponent } from './tables/spell-table/spell-table.component'
 import { MonsterTableComponent } from './tables/monster-table/monster-table.component';
 import { CreateSpellDialogComponent } from './spells/create-spell-dialog/create-spell-dialog.component';
 import { CreateMonsterDialogComponent } from './monsters/create-monster-dialog/create-monster-dialog.component';
+import { ItemsComponent } from './items/items.component';
+import { ItemComponent } from './items/item/item.component';
+import { ItemTableComponent } from './tables/item-table/item-table.component';
+import { CreateItemDialogComponent } from './items/create-item-dialog/create-item-dialog.component';
+import { RacesComponent } from './races/races.component';
+import { RaceComponent } from './races/race/race.component';
+import { RaceTableComponent } from './tables/race-table/race-table.component';
+import { CreateRaceDialogComponent } from './races/create-race-dialog/create-race-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +47,14 @@ import { CreateMonsterDialogComponent } from './monsters/create-monster-dialog/c
     MonsterComponent,
     MonsterTableComponent,
     CreateMonsterDialogComponent,
+    ItemsComponent,
+    ItemComponent,
+    ItemTableComponent,
+    CreateItemDialogComponent,
+    RacesComponent,
+    RaceComponent,
+    RaceTableComponent,
+    CreateRaceDialogComponent,
   ],
   imports: [
     BrowserModule,

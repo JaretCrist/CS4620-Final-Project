@@ -1,0 +1,21 @@
+<div
+  class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
+  *ngFor="let item of this.items; let index = index"
+>
+  <div class="col-6 col-md-4 fs-6" (click)="this.navigate(item.itemId)">
+    {{ item.itemName }}
+  </div>
+  <div class="col-4 col-md-7 fs-6" (click)="this.navigate(item.itemId)">
+    {{ item.itemType }}
+  </div>
+  <div class="col-1" *ngIf="item.itemId !== -1">
+    <button
+      mat-mini-fab
+      color="warn"
+      aria-label="Delete item"
+      (click)="deleteItem(item.itemId)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
