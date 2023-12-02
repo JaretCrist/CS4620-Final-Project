@@ -1,1 +1,39 @@
-<p>create-item-dialog works!</p>
+<form [formGroup]="item">
+  <h1 mat-dialog-title>Create Item</h1>
+  <div mat-dialog-content>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Name:</p>
+          <mat-form-field appearance="fill">
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Type:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="type" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Source:</p>
+          <mat-form-field appearance="fill">
+            <input type="number" matInput formControlName="source" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Description:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Cancel</button>
+    <button mat-button (click)="create()">Create Item</button>
+  </div>
+</form>
