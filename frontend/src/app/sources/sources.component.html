@@ -23,19 +23,57 @@
 -->
   <div
     class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
-    *ngFor="let source of this.sourceList; let index = index"
+    *ngFor="let source of this.displayedSourceList; let index = index"
   >
     <div class="col-6 fs-6" (click)="this.navigate(source.id)">
-      {{ source.name }}
+      <div class="row">
+        <div *ngIf="source.id !== -1">
+          {{ source.name }}
+        </div>
+        <div *ngIf="source.id === -1">
+          <button
+            mat-icon-button
+            aria-label="Filter Name"
+            (click)="filter('name')"
+            class="fs-6"
+          >
+            {{ source.name }} <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="col-4 col-md-2 fs-6" (click)="this.navigate(source.id)">
-      {{ source.publisher }}
+      <div *ngIf="source.id !== -1">
+        {{ source.publisher }}
+      </div>
+      <div *ngIf="source.id === -1">
+        <button
+          mat-icon-button
+          aria-label="Filter Publisher"
+          (click)="filter('publisher')"
+          class="fs-6"
+        >
+          {{ source.publisher }} <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
     </div>
     <div
       class="col-2 fs-6 d-none d-md-block"
       (click)="this.navigate(source.id)"
     >
-      {{ source.date }}
+      <div *ngIf="source.id !== -1">
+        {{ source.date }}
+      </div>
+      <div *ngIf="source.id === -1">
+        <button
+          mat-icon-button
+          aria-label="Filter Date"
+          (click)="filter('date')"
+          class="fs-6"
+        >
+          {{ source.date }} <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
     </div>
     <div
       class="col-1 fs-6 d-none d-md-block"
@@ -61,6 +99,9 @@
       >
         <mat-icon>delete</mat-icon>
       </button>
+    </div>
+    <div class="col-1" *ngIf="source.id === -1">
+      <button mat-raised-button (click)="resetFilters()">Reset</button>
     </div>
   </div>
 </div>

@@ -1,18 +1,54 @@
 <div
   class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
-  *ngFor="let race of this.races; let index = index"
+  *ngFor="let race of this.displayedRaceList; let index = index"
 >
   <div class="col-6 col-md-4 fs-6" (click)="this.navigate(race.raceId)">
-    {{ race.raceName }}
+    <div *ngIf="race.raceId !== -1">
+      {{ race.raceName }}
+    </div>
+    <div *ngIf="race.raceId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Name"
+        (click)="filter('raceName')"
+        class="fs-6"
+      >
+        {{ race.raceName }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-4 fs-6" (click)="this.navigate(race.raceId)">
-    {{ race.parent }}
+    <div *ngIf="race.raceId !== -1">
+      {{ race.parent }}
+    </div>
+    <div *ngIf="race.raceId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Parent"
+        (click)="filter('parent')"
+        class="fs-6"
+      >
+        {{ race.parent }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div
     class="col-3 fs-6 d-none d-md-block"
     (click)="this.navigate(race.raceId)"
   >
-    {{ race.sourceName }}
+    <div *ngIf="race.raceId !== -1">
+      {{ race.sourceName }}
+    </div>
+    <div *ngIf="race.raceId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Source Name"
+        (click)="filter('sourceName')"
+        class="fs-6"
+      >
+        {{ race.sourceName }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-1" *ngIf="race.raceId !== -1">
     <button
@@ -23,5 +59,8 @@
     >
       <mat-icon>delete</mat-icon>
     </button>
+  </div>
+  <div class="col-1" *ngIf="race.raceId === -1">
+    <button mat-raised-button (click)="resetFilters()">Reset</button>
   </div>
 </div>

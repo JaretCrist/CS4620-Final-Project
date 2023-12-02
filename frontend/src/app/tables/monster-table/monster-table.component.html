@@ -1,30 +1,90 @@
 <div
   class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
-  *ngFor="let monster of this.monsters; let index = index"
+  *ngFor="let monster of this.displayedMonsterList; let index = index"
 >
   <div class="col-5 fs-6" (click)="this.navigate(monster.monsterId)">
-    {{ monster.monsterName }}
+    <div *ngIf="monster.monsterId !== -1">
+      {{ monster.monsterName }}
+    </div>
+    <div *ngIf="monster.monsterId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Name"
+        (click)="filter('monsterName')"
+        class="fs-6"
+      >
+        {{ monster.monsterName }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-4 col-md-3 fs-6" (click)="this.navigate(monster.monsterId)">
-    {{ monster.type }}
+    <div *ngIf="monster.monsterId !== -1">
+      {{ monster.type }}
+    </div>
+    <div *ngIf="monster.monsterId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Type"
+        (click)="filter('type')"
+        class="fs-6"
+      >
+        {{ monster.type }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div
     class="col-1 fs-6 d-none d-md-block"
     (click)="this.navigate(monster.monsterId)"
   >
-    {{ monster.cr }}
+    <div *ngIf="monster.monsterId !== -1">
+      {{ monster.cr }}
+    </div>
+    <div *ngIf="monster.monsterId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter CR"
+        (click)="filter('cr')"
+        class="fs-6"
+      >
+        {{ monster.cr }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div
     class="col-1 fs-6 d-none d-md-block"
     (click)="this.navigate(monster.monsterId)"
   >
-    {{ monster.ac }}
+    <div *ngIf="monster.monsterId !== -1">
+      {{ monster.ac }}
+    </div>
+    <div *ngIf="monster.monsterId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter AC"
+        (click)="filter('ac')"
+        class="fs-6"
+      >
+        {{ monster.ac }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div
     class="col-1 fs-6 d-none d-md-block"
     (click)="this.navigate(monster.monsterId)"
   >
-    {{ monster.hp }}
+    <div *ngIf="monster.monsterId !== -1">
+      {{ monster.hp }}
+    </div>
+    <div *ngIf="monster.monsterId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter HP"
+        (click)="filter('hp')"
+        class="fs-6"
+      >
+        {{ monster.hp }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-1" *ngIf="monster.monsterId !== -1">
     <button
@@ -35,5 +95,8 @@
     >
       <mat-icon>delete</mat-icon>
     </button>
+  </div>
+  <div class="col-1" *ngIf="monster.monsterId === -1">
+    <button mat-raised-button (click)="resetFilters()">Reset</button>
   </div>
 </div>

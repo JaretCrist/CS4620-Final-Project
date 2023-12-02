@@ -1,18 +1,54 @@
 <div
   class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
-  *ngFor="let spell of this.spells; let index = index"
+  *ngFor="let spell of this.displayedSpellList; let index = index"
 >
   <div class="col-6 fs-6" (click)="this.navigate(spell.spellId)">
-    {{ spell.spellName }}
+    <div *ngIf="spell.spellId !== -1">
+      {{ spell.spellName }}
+    </div>
+    <div *ngIf="spell.spellId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Name"
+        (click)="filter('spellName')"
+        class="fs-6"
+      >
+        {{ spell.spellName }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-3 fs-6" (click)="this.navigate(spell.spellId)">
-    {{ spell.school }}
+    <div *ngIf="spell.spellId !== -1">
+      {{ spell.school }}
+    </div>
+    <div *ngIf="spell.spellId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter School"
+        (click)="filter('school')"
+        class="fs-6"
+      >
+        {{ spell.school }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div
     class="col-2 fs-6 d-none d-md-block"
     (click)="this.navigate(spell.spellId)"
   >
-    {{ spell.castingTime }}
+    <div *ngIf="spell.spellId !== -1">
+      {{ spell.castingTime }}
+    </div>
+    <div *ngIf="spell.spellId === -1">
+      <button
+        mat-icon-button
+        aria-label="Filter Casting Time"
+        (click)="filter('castingTime')"
+        class="fs-6"
+      >
+        {{ spell.castingTime }} <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="col-1" *ngIf="spell.spellId !== -1">
     <button
@@ -23,5 +59,8 @@
     >
       <mat-icon>delete</mat-icon>
     </button>
+  </div>
+  <div class="col-1" *ngIf="spell.spellId === -1">
+    <button mat-raised-button (click)="resetFilters()">Reset</button>
   </div>
 </div>

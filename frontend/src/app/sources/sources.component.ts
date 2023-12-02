@@ -6,6 +6,7 @@ import { Source } from '../../../../types';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CreateSourceDialogComponent } from './create-source-dialog/create-source-dialog.component';
+import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
 
 @Component({
   selector: 'app-sources',
@@ -31,12 +32,40 @@ export class SourcesComponent implements OnInit {
     },
   ];
 
+  displayedSourceList: Source[] = [];
+
+  filter(filterKey: string): void {
+    const dialogRef = this.dialog.open(FilterDialogComponent);
+
+    dialogRef.afterClosed().subscribe((search: string) => {
+      if (search) {
+        this.displayedSourceList = this.displayedSourceList.filter((source) => {
+          if (source.id === -1) {
+            return true;
+          }
+          if (Object.keys(source).includes(filterKey)) {
+            const value = (source as { [key: string]: any })[filterKey];
+            if (value) {
+              return value.toLowerCase().includes(search.toLowerCase());
+            }
+          }
+          return false;
+        });
+      }
+    });
+  }
+
+  resetFilters(): void {
+    this.displayedSourceList = this.sourceList;
+  }
+
   ngOnInit(): void {
     this.httpClient
       .get<Source[]>('http://localhost:3000/sources')
       .pipe(
         tap((results: Source[]) => {
           this.sourceList = this.sourceList.concat(results);
+          this.displayedSourceList = this.sourceList;
         }),
         catchError((error) => {
           console.log(error);

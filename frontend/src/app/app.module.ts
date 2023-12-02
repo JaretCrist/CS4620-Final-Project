@@ -29,6 +29,7 @@ import { RacesComponent } from './races/races.component';
 import { RaceComponent } from './races/race/race.component';
 import { RaceTableComponent } from './tables/race-table/race-table.component';
 import { CreateRaceDialogComponent } from './races/create-race-dialog/create-race-dialog.component';
+import { FilterDialogComponent } from './filter-dialog/filter-dialog.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { CreateRaceDialogComponent } from './races/create-race-dialog/create-rac
     RaceComponent,
     RaceTableComponent,
     CreateRaceDialogComponent,
+    FilterDialogComponent,
   ],
   imports: [
     BrowserModule,
