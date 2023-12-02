@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, finalize, of, tap } from 'rxjs';
-import { Source } from '../../../../types';
+import { Source } from '../../../types';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CreateSourceDialogComponent } from './create-source-dialog/create-source-dialog.component';

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Monster, MonsterShort } from '../../../../types';
+import { Monster, MonsterShort } from '../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateMonsterDialogComponent } from './create-monster-dialog/create-monster-dialog.component';
 

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, mergeMap, tap } from 'rxjs';
-import { Spell } from '../../../../../types';
+import { Spell } from '../../../../types';
 
 @Component({
   selector: 'app-spell',

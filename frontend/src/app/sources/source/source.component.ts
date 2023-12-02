@@ -8,7 +8,7 @@ import {
   RaceShort,
   Source,
   SpellShort,
-} from '../../../../../types';
+} from '../../../../types';
 
 @Component({
   selector: 'app-source',

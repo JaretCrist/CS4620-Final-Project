@@ -1,5 +1,5 @@
 import { Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
-import { Source } from "../../../../types";
+import { Source } from "../../../types";
 import * as sourcesService from "../../services/SourcesService";
 
 export class SourcesController {

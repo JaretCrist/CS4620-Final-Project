@@ -1,4 +1,4 @@
-import { Monster, MonsterShort } from "../../../types";
+import { Monster, MonsterShort } from "../../types";
 import knex from "../knex";
 
 export async function selectAllMonsters(): Promise<MonsterShort[]> {

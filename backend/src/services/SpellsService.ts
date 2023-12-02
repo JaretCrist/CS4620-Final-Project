@@ -1,4 +1,4 @@
-import { Spell, SpellShort } from "../../../types";
+import { Spell, SpellShort } from "../../types";
 import knex from "../knex";
 
 export async function selectAllSpells(): Promise<SpellShort[]> {

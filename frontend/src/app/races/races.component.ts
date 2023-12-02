@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Race, RaceShort } from '../../../../types';
+import { Race, RaceShort } from '../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateRaceDialogComponent } from './create-race-dialog/create-race-dialog.component';
 import { SourceMapService } from '../source-map.service';

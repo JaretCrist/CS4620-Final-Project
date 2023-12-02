@@ -1,5 +1,5 @@
 import { Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
-import { Spell } from "../../../../types";
+import { Spell } from "../../../types";
 import * as spellsService from "../../services/SpellsService";
 
 export class SpellsController {

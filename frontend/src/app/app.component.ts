@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Source } from '../../../types';
+import { Source } from '../../types';
 import { catchError, of, tap } from 'rxjs';
 import { SourceMapService } from './source-map.service';
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon"
+    "start": "npx nodemon",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

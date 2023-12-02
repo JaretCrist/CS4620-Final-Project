@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Spell, SpellShort } from '../../../../types';
+import { Spell, SpellShort } from '../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateSpellDialogComponent } from './create-spell-dialog/create-spell-dialog.component';
 

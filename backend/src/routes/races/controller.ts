@@ -1,5 +1,5 @@
 import { Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
-import { Race } from "../../../../types";
+import { Race } from "../../../types";
 import * as racesService from "../../services/RacesService";
 
 export class RacesController {

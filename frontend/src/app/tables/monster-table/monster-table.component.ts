@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { MonsterShort } from '../../../../../types';
+import { MonsterShort } from '../../../../types';
 import { ConfirmationDialogComponent } from 'src/app/confirmation-dialog/confirmation-dialog.component';
 import { FilterDialogComponent } from 'src/app/filter-dialog/filter-dialog.component';
 

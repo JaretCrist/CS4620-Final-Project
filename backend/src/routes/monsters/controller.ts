@@ -1,5 +1,5 @@
 import { Request, ResponseToolkit, ResponseObject } from "@hapi/hapi";
-import { Monster } from "../../../../types";
+import { Monster } from "../../../types";
 import * as monstersService from "../../services/MonstersService";
 
 export class MonstersController {

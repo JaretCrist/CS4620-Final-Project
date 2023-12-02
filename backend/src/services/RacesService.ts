@@ -1,4 +1,4 @@
-import { Race, RaceShort } from "../../../types";
+import { Race, RaceShort } from "../../types";
 import knex from "../knex";
 
 export async function selectAllRaces(): Promise<RaceShort[]> {

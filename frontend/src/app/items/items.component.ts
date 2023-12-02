@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Item, ItemShort } from '../../../../types';
+import { Item, ItemShort } from '../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateItemDialogComponent } from './create-item-dialog/create-item-dialog.component';
 

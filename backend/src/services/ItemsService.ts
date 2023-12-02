@@ -1,4 +1,4 @@
-import { Item, ItemShort } from "../../../types";
+import { Item, ItemShort } from "../../types";
 import knex from "../knex";
 
 export async function selectAllItems(): Promise<ItemShort[]> {

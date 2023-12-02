@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { RaceShort } from '../../../../../types';
+import { RaceShort } from '../../../../types';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
