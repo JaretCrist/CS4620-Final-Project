@@ -1,1 +1,27 @@
-<p>race-table works!</p>
+<div
+  class="row mx-2 my-1 align-items-center border border-dark bg-secondary entry"
+  *ngFor="let race of this.races; let index = index"
+>
+  <div class="col-6 col-md-4 fs-6" (click)="this.navigate(race.raceId)">
+    {{ race.raceName }}
+  </div>
+  <div class="col-4 fs-6" (click)="this.navigate(race.raceId)">
+    {{ race.parent }}
+  </div>
+  <div
+    class="col-3 fs-6 d-none d-md-block"
+    (click)="this.navigate(race.raceId)"
+  >
+    {{ race.sourceName }}
+  </div>
+  <div class="col-1" *ngIf="race.raceId !== -1">
+    <button
+      mat-mini-fab
+      color="warn"
+      aria-label="Delete race"
+      (click)="deleteRace(race.raceId)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

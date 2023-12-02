@@ -1,1 +1,21 @@
-<p>races works!</p>
+<app-navbar
+  [title]="'Races'"
+  [returnLink]="'/Home'"
+  [createAvailable]="true"
+  [createFunction]="createRace"
+></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="this.isLoaded && this.error">
+  <h1>
+    {{ this.error }}
+  </h1>
+  <h1>Is the backend running?</h1>
+</div>
+
+<div *ngIf="this.isLoaded && !this.error">
+  <app-race-table [races]="this.raceList"></app-race-table>
+</div>

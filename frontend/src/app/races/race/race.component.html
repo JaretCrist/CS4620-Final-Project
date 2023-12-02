@@ -1,1 +1,44 @@
-<p>race works!</p>
+<app-navbar [title]="'Races'" [returnLink]="'/races'"></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="error" class="fs-3 my-3">
+  {{ error }}
+</div>
+
+<div *ngIf="this.raceInfo.length > 0">
+  <div class="row ms-2 me-3 my-2 height40">
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5"
+    >
+      <h1 class="title my-3">{{ this.raceInfo[0].name }}</h1>
+      <p class="my-3" (click)="navigateToSource(this.raceInfo[0].source)">
+        Source: <em class="text-info">{{ this.raceInfo[0].sourceName }}</em>
+      </p>
+    </div>
+
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5"
+    >
+      <p class="my-5 mb-3">Parent Race: {{ this.raceInfo[0].parent }}</p>
+    </div>
+  </div>
+  <div class="row mx-2">
+    <!-- View buttons -->
+    <button class="col-3" mat-raised-button color="secondary">
+      Description
+    </button>
+  </div>
+
+  <div
+    class="height40 bg-secondary rounded border border-primary border-5 mx-2"
+  >
+    <div>
+      <div *ngFor="let paragraph of this.raceInfo[0].details.split('|||')">
+        <p class="my-3">{{ paragraph }}</p>
+      </div>
+    </div>
+  </div>
+</div>
