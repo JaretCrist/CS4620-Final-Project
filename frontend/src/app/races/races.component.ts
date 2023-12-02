@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Race, RaceShort } from '../../../../types';
 import { catchError, finalize, of, tap } from 'rxjs';
 import { CreateRaceDialogComponent } from './create-race-dialog/create-race-dialog.component';
+import { SourceMapService } from '../source-map.service';
 
 @Component({
   selector: 'app-races',
@@ -11,7 +12,11 @@ import { CreateRaceDialogComponent } from './create-race-dialog/create-race-dial
   styleUrls: ['./races.component.scss'],
 })
 export class RacesComponent implements OnInit {
-  constructor(private httpClient: HttpClient, public dialog: MatDialog) {}
+  constructor(
+    private httpClient: HttpClient,
+    public dialog: MatDialog,
+    private sourceMapService: SourceMapService
+  ) {}
 
   isLoaded = false;
   error?: string = undefined;
@@ -57,7 +62,7 @@ export class RacesComponent implements OnInit {
               raceId: data.id,
               raceName: newRace.name,
               parent: newRace.parent,
-              sourceName: 'PLACEHOLDER UNTIL MAP EXISTS',
+              sourceName: this.sourceMapService.getSourceName(newRace.source),
             });
           });
       }
