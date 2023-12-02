@@ -92,7 +92,7 @@
     <div *ngIf="this.viewMode === 'races'" class="fs-5 my-3 ms-3">
       <div *ngIf="!(this.races.length > 0)">This source book has no races!</div>
       <div *ngIf="this.races.length > 0">
-        <!-- <app-race-table [races]="this.races"></app-race-table> -->
+        <app-race-table [races]="this.races"></app-race-table>
       </div>
     </div>
     <div *ngIf="this.viewMode === 'items'" class="fs-5 my-3 ms-3">
