@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    # volumes:
+    #   - type: volume
+    #     source: dnd-db-volume
+    #     target: /backend/src/dnd.db
+    ports:
+      - 3000:80
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    ports:
+      - 8080:80
+# volumes:
+#   dnd-db-volume:
