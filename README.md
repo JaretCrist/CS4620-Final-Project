@@ -4,6 +4,22 @@ This project was created for the Ohio University CS4620, Fall 2023, final projec
 ## Overview
 This project is a full-stack web application to view and interact with a Dungeons & Dragons database.
 
+## Running the project
+### Locally
+
+Pre-reqs: Have node installed
+
+1. cd backend
+2. npm i
+3. npm run start
+- LEAVE THIS RUNNING
+4. Open new terminal instance
+5. cd frontend
+6. npm i
+7. npm run start
+  - LEAVE THIS RUNNING
+8. Open localhost:4200 in your browser
+
 ## Motivation
 Dungeons & Dragons is a widely popular Tabletop Role Playing Game (TTRPG). It features a wide array of content, including official content from Wizards of the Coast, content from other publishers, and “homebrew” content created by players. Trying to search for new content to use is not always a simple process. The goal of this project is to create an easy to navigate webpage that includes features from a wide range of source books, as well as the ability to add new items into the database.
 
