@@ -1,56 +1,65 @@
 id,name,publisher,date,photo_url
-2,Homebrew,You,N/A,null
-3,Player’s Handbook (PHB),Wizards of the Coast,August 2014,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-players-handbook-phb-2.jpeg?resize=391%2C500&amp;ssl=1
-4,Dungeon Master’s Guide (DMG),Wizards of the Coast,December 2014,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-dungeon-masters-guide-dmg.webp?resize=384%2C503&amp;ssl=1
-5,Monster Manual (MM),Wizards of the Coast,September 2014,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-monster-manual-mm-1.jpeg?resize=532%2C679&amp;ssl=1
-6,Volo’s Guide to Monsters (VGtM),Wizards of the Coast,November 2016,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-volos-guide-to-monsters.jpeg?resize=382%2C499&amp;ssl=1
-7,Xanathar’s Guide to Everything (XGtE),Wizards of the Coast,November 2017,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-xanathars-guide-to-everything-1.jpeg?resize=381%2C499&amp;ssl=1
-8,Mordenkainen’s Tome of Foes (MToF),Wizards of the Coast,May 2018,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mordenkainens-tome-of-foes.jpeg?resize=783%2C1024&amp;ssl=1
-9,Tasha’s Cauldron of Everything (TCoE),Wizards of the Coast,November 2020,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tashas-cauldron-of-everything.webp?resize=685%2C900&amp;ssl=1
-10,Fizban’s Treasury of Dragons (FToD),Wizards of the Coast,October 2021,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-fizbans-treasury-of-dragons.jpeg?resize=782%2C1024&amp;ssl=1
-11,Mordenkainen Presents Monsters of the Multiverse (MPMotM),Wizards of the Coast,May 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mordenkainen-monsters-multiverse.jpeg?resize=250%2C326&amp;ssl=1
-12,Bigby Presents: Glory of the Giants (BPGotG),Wizards of the Coast,August 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/bigby-presents-glory-of-the-giants-1-2.png?resize=420%2C540&amp;ssl=1
-13,The Book of Many Things (TBoMT),Wizards of the Coast,November 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/book-of-many-things-new-image-1.png?resize=800%2C450&amp;ssl=1
-14,Sword Coast Adventurer’s Guide (SCAG),Wizards of the Coast,November 2015,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-sword-coast-adventurers-guide.jpeg?resize=382%2C499&amp;ssl=1
-15,Guildmasters’ Guide to Ravnica (GGtR),Wizards of the Coast,November 2018,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-guildmasters-guide-to-ravnica-1.jpeg?resize=333%2C500&amp;ssl=1
-16,Acquisitions Incorporated (AI),Wizards of the Coast,June 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-acquisitions-incorporated.jpeg?resize=794%2C1024&amp;ssl=1
-17,Eberron: Rising from the Last War (ERftLW),Wizards of the Coast,November 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-eberron-rising-from-the-last-war.jpeg?resize=802%2C1024&amp;ssl=1
-18,Explorer’s Guide to Wildemount (EGtW),Wizards of the Coast,March 2020,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-explorers-guide-to-wildemount.webp?resize=446%2C577&amp;ssl=1
-19,Mythic Odysseys of Theros (MOoT),Wizards of the Coast,July 2020,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mythic-odysseys-of-theros.jpeg?resize=802%2C1024&amp;ssl=1
-20,Van Richten’s Guide to Ravenloft (VRGtR),Wizards of the Coast,May 2021,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-van-richtens-guide-to-ravenloft.png?resize=279%2C357&amp;ssl=1
-21,Strixhaven: A Curriculum of Chaos (SACoC),Wizards of the Coast,December 2021,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-strixhaven-curriculum-of-chaos-1.webp?resize=458%2C600&amp;ssl=1
-22,Spelljammer: Adventures in Space (SAiS),Wizards of the Coast,August 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-spelljammer-adventures-in-space.png?resize=250%2C328&amp;ssl=1
-23,Planescape: Adventures in the Multiverse (PAitM),Wizards of the Coast,October 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/new-planescape-5e-cover-art.png?resize=420%2C554&amp;ssl=1
-24,Hoard of the Dragon Queen (HotDQ),Wizards of the Coast,August 2014,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-hoard-of-the-dragon-queen.jpeg?resize=782%2C1024&amp;ssl=1
-25,The Rise of Tiamat (TRoT),Wizards of the Coast,November 2014,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-the-rise-of-tiamat.jpeg?resize=277%2C360&amp;ssl=1
-26,Princes of the Apocalypse (PotA),Wizards of the Coast,April 2015,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-princes-of-the-apocalypse.jpeg?resize=382%2C499&amp;ssl=1
-27,Out of the Abyss (OutA),Wizards of the Coast,September 2015,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-out-of-the-abyss.jpeg?resize=276%2C360&amp;ssl=1
-28,Curse of Strahd (CoS),Wizards of the Coast,March 2016,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-curse-of-strahd.jpeg?resize=382%2C499&amp;ssl=1
-29,Storm King’s Thunder (SKT),Wizards of the Coast,September 2016,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-storm-kings-thunder.jpeg?resize=783%2C1024&amp;ssl=1
-30,Tales from the Yawning Portal (TftYP),Wizards of the Coast,April 2017,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tales-from-the-yawning-portal.webp?resize=782%2C1024&amp;ssl=1
-31,Tomb of Annihilation (ToA),Wizards of the Coast,September 2017,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tomb-of-annihilation.jpeg?resize=783%2C1024&amp;ssl=1
-32,Waterdeep: Dragon Heist (WDH),Wizards of the Coast,September 2018,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-waterdeep-dragon-heist-1.jpeg?resize=788%2C1024&amp;ssl=1
-33,Waterdeep: Dungeon of the Mad Mage (WDotMM),Wizards of the Coast,November 2018,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-waterdeep-dungeon-of-the-mad-mage.jpeg?resize=769%2C1000&amp;ssl=1
-34,Stranger Things: The Hunt for Thessalhydra,Wizards of the Coast,April 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-stranger-things.jpeg?resize=414%2C500&amp;ssl=1
-35,Ghosts of Saltmarsh (GoS),Wizards of the Coast,May 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-ghosts-of-saltmarsh-1.jpeg?resize=773%2C1000&amp;ssl=1
-36,Essentials Kit (EK),Wizards of the Coast,September 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-essentials-kit.jpeg?resize=801%2C1024&amp;ssl=1
-37,Baldur’s Gate: Descent into Avernus (BGDiA),Wizards of the Coast,September 2019,"https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-baldurs-gate-descent-into-avernus.png?resize=232%2C300&amp;ssl=1"" decoding=""async"" height=""300"" src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" width=""232"
-38,Dungeons &amp; Dragons vs Rick and Morty (DDvRM),Wizards of the Coast,March 2019,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-rick-and-morty-vs-dnd-1.jpeg?resize=853%2C1024&amp;ssl=1
-39,Icewind Dale: Rime of the Frostmaiden (IDRotF),Wizards of the Coast,September 2020,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-icewind-dale-rime-frostmaiden.jpeg?resize=772%2C1000&amp;ssl=1
-40,Candlekeep Mysteries (CM),Wizards of the Coast,March 2021,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-candlekeep-mysteries.jpeg?resize=783%2C1000&amp;ssl=1
-41,The Wild Beyond The Witchlight (TWBTW),Wizards of the Coast,September 2021,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-wild-beyond-the-witchlight.jpeg?resize=679%2C869&amp;ssl=1
-42,Critical Role: Call of the Netherdeep (CRCotN),Wizards of the Coast,March 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-critical-role-call-netherdeep.jpeg?resize=765%2C1000&amp;ssl=1
-43,Journeys Through the Radiant Citadel (JTtRC),Wizards of the Coast,July 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-journeys-radiant-citadel.jpeg?resize=783%2C1000&amp;ssl=1
-44,Starter Set: Dragons of Stormwreck Isle (DoSI),Wizards of the Coast,October 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-starter-set-dragons-stormwreck-isle.jpeg?resize=887%2C1024&amp;ssl=1
-45,Dragonlance: Shadow of the Dragon Queen (DSotDQ),Wizards of the Coast,December 2022,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-dragonlance-shadow-dragon-queen.jpeg?resize=781%2C1000&amp;ssl=1
-46,Tyranny of Dragons Re-release (ToD),Wizards of the Coast,January 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tyranny-of-dragons.jpeg?resize=777%2C1000&amp;ssl=1
-47,Keys from the Golden Vault (KftGV),Wizards of the Coast,February 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-keys-from-the-golden-vault.webp?resize=780%2C1000&amp;ssl=1
-48,Phandelver and Below: The Shattered Obelisk (PaBTSO),Wizards of the Coast,September 2023,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/phandelver-campaign-new-cover-art.png?resize=424%2C554&amp;ssl=1
-49,New Player’s Handbook,Wizards of the Coast,2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-players-handbook-2024-coming-soon.png?resize=450%2C600&amp;ssl=1
-50,New Dungeon Master’s Guide,Wizards of the Coast,2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-dmg-2024-coming-soon.png?resize=768%2C1024&amp;ssl=1
-51,New Monster Manual,Wizards of the Coast,2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-2024-monster-manual-coming-soon-1.png?resize=450%2C600&amp;ssl=1
-52,New Vecna Adventure,Wizards of the Coast,2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/10/dnd-5e-books-vecna-adventure-1.png?resize=450%2C600&amp;ssl=1
-53,Unearthed Arcana,Wizards of the Coast,Various,https://drive.google.com/file/d/1WOW4986NRpWv7X948COBnQlmfdea9awz/view?usp=sharing
-54,Lost Laboratory of Kwalish,Wizards of the Coast,November 2018,https://www.dndbeyond.com/avatars/10434/498/637248091075319276.jpeg
-55,Tal'Dorei Campaign Setting Reborn,Darrington Press,Janurary 2022,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShE6xUFPyluaX_Ajhr_sYGWHV21leY2Z9Q6R6A2IqXLWIYRp6l
-56,Critical Roll Twitter,Critical Roll,Various,null
+2,Homebrew,You,,
+3,"Player’s Handbook (PHB)","Wizards of the Coast","August 2014",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-players-handbook-phb-2.jpeg?resize=391%2C500&amp;ssl=1
+4,"Dungeon Master’s Guide (DMG)","Wizards of the Coast","December 2014",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-dungeon-masters-guide-dmg.webp?resize=384%2C503&amp;ssl=1
+5,"Monster Manual (MM)","Wizards of the Coast","September 2014",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-monster-manual-mm-1.jpeg?resize=532%2C679&amp;ssl=1
+6,"Volo’s Guide to Monsters (VGtM)","Wizards of the Coast","November 2016",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-volos-guide-to-monsters.jpeg?resize=382%2C499&amp;ssl=1
+7,"Xanathar’s Guide to Everything (XGtE)","Wizards of the Coast","November 2017",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-xanathars-guide-to-everything-1.jpeg?resize=381%2C499&amp;ssl=1
+8,"Mordenkainen’s Tome of Foes (MToF)","Wizards of the Coast","May 2018",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mordenkainens-tome-of-foes.jpeg?resize=783%2C1024&amp;ssl=1
+9,"Tasha’s Cauldron of Everything (TCoE)","Wizards of the Coast","November 2020",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tashas-cauldron-of-everything.webp?resize=685%2C900&amp;ssl=1
+10,"Fizban’s Treasury of Dragons (FToD)","Wizards of the Coast","October 2021",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-fizbans-treasury-of-dragons.jpeg?resize=782%2C1024&amp;ssl=1
+11,"Mordenkainen Presents Monsters of the Multiverse (MPMotM)","Wizards of the Coast","May 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mordenkainen-monsters-multiverse.jpeg?resize=250%2C326&amp;ssl=1
+12,"Bigby Presents: Glory of the Giants (BPGotG)","Wizards of the Coast","August 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/bigby-presents-glory-of-the-giants-1-2.png?resize=420%2C540&amp;ssl=1
+13,"The Book of Many Things (TBoMT)","Wizards of the Coast","November 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/book-of-many-things-new-image-1.png?resize=800%2C450&amp;ssl=1
+14,"Sword Coast Adventurer’s Guide (SCAG)","Wizards of the Coast","November 2015",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-sword-coast-adventurers-guide.jpeg?resize=382%2C499&amp;ssl=1
+15,"Guildmasters’ Guide to Ravnica (GGtR)","Wizards of the Coast","November 2018",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-guildmasters-guide-to-ravnica-1.jpeg?resize=333%2C500&amp;ssl=1
+16,"Acquisitions Incorporated (AI)","Wizards of the Coast","June 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-acquisitions-incorporated.jpeg?resize=794%2C1024&amp;ssl=1
+17,"Eberron: Rising from the Last War (ERftLW)","Wizards of the Coast","November 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-eberron-rising-from-the-last-war.jpeg?resize=802%2C1024&amp;ssl=1
+18,"Explorer’s Guide to Wildemount (EGtW)","Wizards of the Coast","March 2020",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-explorers-guide-to-wildemount.webp?resize=446%2C577&amp;ssl=1
+19,"Mythic Odysseys of Theros (MOoT)","Wizards of the Coast","July 2020",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-mythic-odysseys-of-theros.jpeg?resize=802%2C1024&amp;ssl=1
+20,"Van Richten’s Guide to Ravenloft (VRGtR)","Wizards of the Coast","May 2021",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-van-richtens-guide-to-ravenloft.png?resize=279%2C357&amp;ssl=1
+21,"Strixhaven: A Curriculum of Chaos (SACoC)","Wizards of the Coast","December 2021",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-strixhaven-curriculum-of-chaos-1.webp?resize=458%2C600&amp;ssl=1
+22,"Spelljammer: Adventures in Space (SAiS)","Wizards of the Coast","August 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-spelljammer-adventures-in-space.png?resize=250%2C328&amp;ssl=1
+23,"Planescape: Adventures in the Multiverse (PAitM)","Wizards of the Coast","October 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/new-planescape-5e-cover-art.png?resize=420%2C554&amp;ssl=1
+24,"Hoard of the Dragon Queen (HotDQ)","Wizards of the Coast","August 2014",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-hoard-of-the-dragon-queen.jpeg?resize=782%2C1024&amp;ssl=1
+25,"The Rise of Tiamat (TRoT)","Wizards of the Coast","November 2014",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-the-rise-of-tiamat.jpeg?resize=277%2C360&amp;ssl=1
+26,"Princes of the Apocalypse (PotA)","Wizards of the Coast","April 2015",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-princes-of-the-apocalypse.jpeg?resize=382%2C499&amp;ssl=1
+27,"Out of the Abyss (OutA)","Wizards of the Coast","September 2015",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-out-of-the-abyss.jpeg?resize=276%2C360&amp;ssl=1
+28,"Curse of Strahd (CoS)","Wizards of the Coast","March 2016",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-curse-of-strahd.jpeg?resize=382%2C499&amp;ssl=1
+29,"Storm King’s Thunder (SKT)","Wizards of the Coast","September 2016",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-storm-kings-thunder.jpeg?resize=783%2C1024&amp;ssl=1
+30,"Tales from the Yawning Portal (TftYP)","Wizards of the Coast","April 2017",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tales-from-the-yawning-portal.webp?resize=782%2C1024&amp;ssl=1
+31,"Tomb of Annihilation (ToA)","Wizards of the Coast","September 2017",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tomb-of-annihilation.jpeg?resize=783%2C1024&amp;ssl=1
+32,"Waterdeep: Dragon Heist (WDH)","Wizards of the Coast","September 2018",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-waterdeep-dragon-heist-1.jpeg?resize=788%2C1024&amp;ssl=1
+33,"Waterdeep: Dungeon of the Mad Mage (WDotMM)","Wizards of the Coast","November 2018",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-waterdeep-dungeon-of-the-mad-mage.jpeg?resize=769%2C1000&amp;ssl=1
+34,"Stranger Things: The Hunt for Thessalhydra","Wizards of the Coast","April 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-stranger-things.jpeg?resize=414%2C500&amp;ssl=1
+35,"Ghosts of Saltmarsh (GoS)","Wizards of the Coast","May 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-ghosts-of-saltmarsh-1.jpeg?resize=773%2C1000&amp;ssl=1
+36,"Essentials Kit (EK)","Wizards of the Coast","September 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-essentials-kit.jpeg?resize=801%2C1024&amp;ssl=1
+37,"Baldur’s Gate: Descent into Avernus (BGDiA)","Wizards of the Coast","September 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-baldurs-gate-descent-into-avernus.png?resize=232%2C300&amp;ssl=1
+38,"Dungeons &amp; Dragons vs Rick and Morty (DDvRM)","Wizards of the Coast","March 2019",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-rick-and-morty-vs-dnd-1.jpeg?resize=853%2C1024&amp;ssl=1
+39,"Icewind Dale: Rime of the Frostmaiden (IDRotF)","Wizards of the Coast","September 2020",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-icewind-dale-rime-frostmaiden.jpeg?resize=772%2C1000&amp;ssl=1
+40,"Candlekeep Mysteries (CM)","Wizards of the Coast","March 2021",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-candlekeep-mysteries.jpeg?resize=783%2C1000&amp;ssl=1
+41,"The Wild Beyond The Witchlight (TWBTW)","Wizards of the Coast","September 2021",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-wild-beyond-the-witchlight.jpeg?resize=679%2C869&amp;ssl=1
+42,"Critical Role: Call of the Netherdeep (CRCotN)","Wizards of the Coast","March 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-critical-role-call-netherdeep.jpeg?resize=765%2C1000&amp;ssl=1
+43,"Journeys Through the Radiant Citadel (JTtRC)","Wizards of the Coast","July 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-journeys-radiant-citadel.jpeg?resize=783%2C1000&amp;ssl=1
+44,"Starter Set: Dragons of Stormwreck Isle (DoSI)","Wizards of the Coast","October 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-starter-set-dragons-stormwreck-isle.jpeg?resize=887%2C1024&amp;ssl=1
+45,"Dragonlance: Shadow of the Dragon Queen (DSotDQ)","Wizards of the Coast","December 2022",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-dragonlance-shadow-dragon-queen.jpeg?resize=781%2C1000&amp;ssl=1
+46,"Tyranny of Dragons Re-release (ToD)","Wizards of the Coast","January 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-tyranny-of-dragons.jpeg?resize=777%2C1000&amp;ssl=1
+47,"Keys from the Golden Vault (KftGV)","Wizards of the Coast","February 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/04/dnd-5e-books-keys-from-the-golden-vault.webp?resize=780%2C1000&amp;ssl=1
+48,"Phandelver and Below: The Shattered Obelisk (PaBTSO)","Wizards of the Coast","September 2023",https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/05/phandelver-campaign-new-cover-art.png?resize=424%2C554&amp;ssl=1
+49,"New Player’s Handbook","Wizards of the Coast",2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-players-handbook-2024-coming-soon.png?resize=450%2C600&amp;ssl=1
+50,"New Dungeon Master’s Guide","Wizards of the Coast",2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-dmg-2024-coming-soon.png?resize=768%2C1024&amp;ssl=1
+51,"New Monster Manual","Wizards of the Coast",2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/09/new-2024-monster-manual-coming-soon-1.png?resize=450%2C600&amp;ssl=1
+52,"New Vecna Adventure","Wizards of the Coast",2024,https://i0.wp.com/dungeonsanddragonsfan.com/wp-content/uploads/2023/10/dnd-5e-books-vecna-adventure-1.png?resize=450%2C600&amp;ssl=1
+53,"Unearthed Arcana","Wizards of the Coast",Various,
+54,"Lost Laboratory of Kwalish","Wizards of the Coast","November 2018",https://www.dndbeyond.com/avatars/10434/498/637248091075319276.jpeg
+55,"Tal'Dorei Campaign Setting Reborn","Darrington Press","Janurary 2022",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShE6xUFPyluaX_Ajhr_sYGWHV21leY2Z9Q6R6A2IqXLWIYRp6l
+56,"Critical Roll Twitter","Critical Roll",Various,
+73,"Infernal Machine Rebuild","Wizards of the Coast","November 2019",
+74,"Wayfinder's Guide to Eberron","Wizards of the Coast","July 2018",
+75,"Sleeping Dragon's Wake","Wizards of the Coast","September 2019",
+76,"Dungeons & Dragons - Honor Among Thieves","Wizards of the Coast","March 2023",
+77,"Monstrous Compendium Volume 2 - Dragonlance Creatures","Wizards of the Coast","December 2022",
+78,"Divine Contention","Wizards of the Coast","September 2019",
+79,"Elemental Evil Player's Companion","Wizards of the Coast","April 2015",
+80,"The Tortle Package","Wizards of the Coast","September 2017",
+81,"Adventure with Muk","Wizards of the Coast","November 2019",

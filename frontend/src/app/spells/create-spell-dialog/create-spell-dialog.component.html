@@ -1,0 +1,73 @@
+<form [formGroup]="spell">
+  <h1 mat-dialog-title>Create Spell</h1>
+  <div mat-dialog-content>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Name:</p>
+          <mat-form-field appearance="fill">
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>School:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="school" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Range:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="range" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Duration:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="duration" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row mt-4">
+          <mat-form-field appearance="fill">
+            <mat-label>Source</mat-label>
+            <mat-select formControlName="source">
+              <mat-option *ngFor="let source of sources" [value]="source.id">{{
+                source.name
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Casting Time:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="casting_time" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Components:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="components" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Classes:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="classes" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Description:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Cancel</button>
+    <button mat-button (click)="create()">Create Spell</button>
+  </div>
+</form>

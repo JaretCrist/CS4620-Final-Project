@@ -1,0 +1,43 @@
+<form [formGroup]="race">
+  <h1 mat-dialog-title>Create Race</h1>
+  <div mat-dialog-content>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="row">
+          <p>Name:</p>
+          <mat-form-field appearance="fill">
+            <input matInput required formControlName="name" />
+          </mat-form-field>
+        </div>
+        <div class="row my-3">
+          <p>Parent Race:</p>
+          <mat-form-field appearance="fill">
+            <input matInput formControlName="parent" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row mt-4">
+          <mat-form-field appearance="fill">
+            <mat-label>Source</mat-label>
+            <mat-select formControlName="source">
+              <mat-option *ngFor="let source of sources" [value]="source.id">{{
+                source.name
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>Details:</div>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="details"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Cancel</button>
+    <button mat-button (click)="create()">Create Race</button>
+  </div>
+</form>

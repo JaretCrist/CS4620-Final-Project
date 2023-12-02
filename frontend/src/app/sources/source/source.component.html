@@ -1,0 +1,105 @@
+<app-navbar [title]="'Sources'" [returnLink]="'/sources'"></app-navbar>
+
+<div *ngIf="!this.isLoaded">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="error" class="fs-3 my-3">
+  {{ error }}
+</div>
+
+<div *ngIf="this.sourceInfo.length > 0">
+  <div class="row ms-2 me-3 my-2 height40">
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5"
+    >
+      <h1 class="title my-3">{{ this.sourceInfo[0].name }}</h1>
+      <p class="fs-3 my-3">Publisher: {{ this.sourceInfo[0].publisher }}</p>
+      <p class="fs-3 my-3">Release Date: {{ this.sourceInfo[0].date }}</p>
+    </div>
+
+    <div
+      class="col-12 col-md-6 bg-secondary rounded border border-primary border-5 text-center"
+    >
+      <div *ngIf="this.sourceInfo[0].photo_url">
+        <img
+          src="{{ this.sourceInfo[0].photo_url }}"
+          alt="{{ this.sourceInfo[0].name }} Cover Art"
+          class="fitSize"
+        />
+      </div>
+      <div *ngIf="!this.sourceInfo[0].photo_url" class="fs-4 mt-4">
+        Cover art not found
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-2">
+    <!-- Four buttons -->
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'spells'"
+    >
+      Spells
+    </button>
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'monsters'"
+    >
+      Monsters
+    </button>
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'races'"
+    >
+      Races
+    </button>
+    <button
+      class="col-3"
+      mat-raised-button
+      color="secondary"
+      (click)="this.viewMode = 'items'"
+    >
+      Items
+    </button>
+  </div>
+  <!-- For each of child, create row with click nav -->
+  <div
+    class="height40 bg-secondary rounded border border-primary border-5 mx-2"
+  >
+    <div *ngIf="this.viewMode === 'spells'">
+      <div *ngIf="!(this.spells.length > 0)" class="fs-5 my-3 ms-3">
+        This source book has no spells!
+      </div>
+      <div *ngIf="this.spells.length > 0">
+        <app-spell-table [spells]="this.spells"></app-spell-table>
+      </div>
+    </div>
+    <div *ngIf="this.viewMode === 'monsters'">
+      <div *ngIf="!(this.monsters.length > 0)" class="fs-5 my-3 ms-3">
+        This source book has no monsters!
+      </div>
+      <div *ngIf="this.monsters.length > 0">
+        <app-monster-table [monsters]="this.monsters"></app-monster-table>
+      </div>
+    </div>
+    <div *ngIf="this.viewMode === 'races'" class="fs-5 my-3 ms-3">
+      <div *ngIf="!(this.races.length > 0)">This source book has no races!</div>
+      <div *ngIf="this.races.length > 0">
+        <app-race-table [races]="this.races"></app-race-table>
+      </div>
+    </div>
+    <div *ngIf="this.viewMode === 'items'" class="fs-5 my-3 ms-3">
+      <div *ngIf="!(this.items.length > 0)">This source book has no items!</div>
+      <div *ngIf="this.items.length > 0">
+        <app-item-table [items]="this.items"></app-item-table>
+      </div>
+    </div>
+  </div>
+</div>
