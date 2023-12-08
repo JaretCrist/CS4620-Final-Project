@@ -12,6 +12,7 @@ Pre-reqs: Have node installed
 1. cd backend
 2. npm i
 3. npm run start
+- Verify that the server is running on port 3000
 - LEAVE THIS RUNNING
 4. Open new terminal instance
 5. cd frontend
@@ -19,6 +20,7 @@ Pre-reqs: Have node installed
 7. npm run start
   - LEAVE THIS RUNNING
 8. Open localhost:4200 in your browser
+- Or a different port as specified in the terminal
 
 ## Motivation
 Dungeons & Dragons is a widely popular Tabletop Role Playing Game (TTRPG). It features a wide array of content, including official content from Wizards of the Coast, content from other publishers, and “homebrew” content created by players. Trying to search for new content to use is not always a simple process. The goal of this project is to create an easy to navigate webpage that includes features from a wide range of source books, as well as the ability to add new items into the database.
