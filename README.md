@@ -1,5 +1,6 @@
 # CS4620-Final-Project
-This project was created for the Ohio University CS4620, Fall 2023, final project.
+This project was created for the Ohio University CS4620, Fall 2023, final project.  
+Presentation: https://www.youtube.com/watch?v=z_6cvcfvML8
 
 ## Overview
 This project is a full-stack web application to view and interact with a Dungeons & Dragons database.
