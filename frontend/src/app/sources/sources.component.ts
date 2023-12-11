@@ -113,14 +113,10 @@ export class SourcesComponent implements OnInit {
         this.httpClient
           .put<{ id: number }>('http://localhost:3000/sources', cleanSource)
           .subscribe((data) => {
-            console.log('DOES THIS REACH');
             newSource.id = data.id;
             this.sourceList.push(newSource);
-            console.log('DOES THIS REACH 2');
             this.displayedSourceList = this.sourceList;
-            console.log('HELP ME');
             this.sourceMapService.addToMap(newSource.id, newSource.name);
-            console.log(this.sourceMapService.getSourceName(newSource.id));
           });
       }
     });
