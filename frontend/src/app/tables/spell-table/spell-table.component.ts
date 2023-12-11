@@ -65,6 +65,9 @@ export class SpellTableComponent implements OnChanges {
           .delete(`http://localhost:3000/spells/${id}`)
           .subscribe();
         this.spells = this.spells.filter((spell) => spell.spellId !== id);
+        this.displayedSpellList = this.displayedSpellList.filter(
+          (spell) => spell.spellId !== id
+        );
       }
     });
   }

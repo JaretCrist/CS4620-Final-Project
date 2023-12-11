@@ -63,6 +63,9 @@ export class RaceTableComponent implements OnChanges {
       if (confirmation) {
         this.httpClient.delete(`http://localhost:3000/races/${id}`).subscribe();
         this.races = this.races.filter((race) => race.raceId !== id);
+        this.displayedRaceList = this.displayedRaceList.filter(
+          (race) => race.raceId !== id
+        );
       }
     });
   }

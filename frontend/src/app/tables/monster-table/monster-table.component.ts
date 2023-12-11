@@ -69,6 +69,9 @@ export class MonsterTableComponent implements OnChanges {
         this.monsters = this.monsters.filter(
           (monster) => monster.monsterId !== id
         );
+        this.displayedMonsterList = this.displayedMonsterList.filter(
+          (monster) => monster.monsterId !== id
+        );
       }
     });
   }

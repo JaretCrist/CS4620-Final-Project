@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CreateSourceDialogComponent } from './create-source-dialog/create-source-dialog.component';
 import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
+import { SourceMapService } from '../source-map.service';
 
 @Component({
   selector: 'app-sources',
@@ -17,7 +18,8 @@ export class SourcesComponent implements OnInit {
   constructor(
     private httpClient: HttpClient,
     private router: Router,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private sourceMapService: SourceMapService
   ) {}
 
   isLoaded = false;
@@ -92,6 +94,9 @@ export class SourcesComponent implements OnInit {
           .delete(`http://localhost:3000/sources/${id}`)
           .subscribe();
         this.sourceList = this.sourceList.filter((source) => source.id !== id);
+        this.displayedSourceList = this.displayedSourceList.filter(
+          (source) => source.id !== id
+        );
       }
     });
   }
@@ -108,8 +113,14 @@ export class SourcesComponent implements OnInit {
         this.httpClient
           .put<{ id: number }>('http://localhost:3000/sources', cleanSource)
           .subscribe((data) => {
+            console.log('DOES THIS REACH');
             newSource.id = data.id;
             this.sourceList.push(newSource);
+            console.log('DOES THIS REACH 2');
+            this.displayedSourceList = this.sourceList;
+            console.log('HELP ME');
+            this.sourceMapService.addToMap(newSource.id, newSource.name);
+            console.log(this.sourceMapService.getSourceName(newSource.id));
           });
       }
     });

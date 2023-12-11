@@ -63,6 +63,9 @@ export class ItemTableComponent implements OnChanges {
       if (confirmation) {
         this.httpClient.delete(`http://localhost:3000/items/${id}`).subscribe();
         this.items = this.items.filter((item) => item.itemId !== id);
+        this.displayedItemList = this.displayedItemList.filter(
+          (item) => item.itemId !== id
+        );
       }
     });
   }

@@ -18,4 +18,8 @@ export class SourceMapService {
   getSourceName(sourceId: number): string {
     return this.sourceMap.get(sourceId) || '';
   }
+
+  addToMap(sourceId: number, sourceName: string) {
+    this.sourceMap.set(sourceId, sourceName);
+  }
 }
